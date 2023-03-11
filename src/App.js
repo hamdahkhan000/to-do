@@ -29,13 +29,13 @@ function App() {
 
   // Mark task as done or completed 
   const markDone = (id) => {
-    let newTask = toDo.map( task => {
+    let completedTask = toDo.map( task => {
       if( task.id === id ) {
         return ({...task, status: !task.status })
       }
       return task;
     })
-    setToDo(newTask);
+    setToDo(completedTask);
   }
 
   // Cancel Update
