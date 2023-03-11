@@ -1,11 +1,11 @@
 const UpdateForm = ({ changeTask, updateTask, cancelUpdate, updateData }) => {
     return(
-        <>
-          {/* Update Task */}
+        
+          /* Update Task */
           <div className="row">
             <div className="col">
               <input
-              value={ updateData && updateData.title }
+              value={ updateData?.title  }
               onChange={(e) => changeTask(e)} 
               className="form-control form-control-lg"/>
             </div>
@@ -14,8 +14,7 @@ const UpdateForm = ({ changeTask, updateTask, cancelUpdate, updateData }) => {
               <button onClick={cancelUpdate}  className="btn btn-lg btn-warning">Cancel</button>
             </div>
           </div>
-          <br/>
-        </>  
+        
     )
 }
 

@@ -9,11 +9,11 @@ const ToDo = ({ markDone, setUpdateData, deleteTask, toDo }) => {
 
         {toDo.length ? '' : 'No Tasks...' }
 
-        {toDo && toDo.sort((a,b) => a.id> b.id ? 1 : -1 ).map( (task, index) => {
+        {toDo?.sort((a,b) => a.id> b.id ? 1 : -1 )
+        .map( (task, index) => {
           return(
-            <React.Fragment key={task.id}>
               
-              <div className="col taskBg">
+              <div className="col taskBg" key={task.id}>
 
                 <div className={task.status ? 'done' : ''}>
                   <span className="taskNumber">{index+1}</span>
@@ -44,7 +44,6 @@ const ToDo = ({ markDone, setUpdateData, deleteTask, toDo }) => {
               
               </div>
 
-            </React.Fragment>
           )
         })
         }
