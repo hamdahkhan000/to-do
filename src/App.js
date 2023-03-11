@@ -68,7 +68,7 @@ function App() {
      <h2>To Do List App (ReactJs)</h2>
      <br/><br/>
 
-     {updateData && updateData ? (
+     {updateData  ? (
       <UpdateForm
       changeTask={changeTask}
       updateTask={updateTask}

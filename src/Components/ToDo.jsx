@@ -7,7 +7,7 @@ const ToDo = ({ markDone, setUpdateData, deleteTask, toDo }) => {
       <>
         {/* Display toDo */}
 
-        {toDo && toDo.length ? '' : 'No Tasks...' }
+        {toDo.length ? '' : 'No Tasks...' }
 
         {toDo && toDo.sort((a,b) => a.id> b.id ? 1 : -1 ).map( (task, index) => {
           return(

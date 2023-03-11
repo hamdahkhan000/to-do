@@ -1,7 +1,7 @@
 const AddTaskForm = ({setNewTask, addTask, newTask }) => {
     return(
-      <>
-        {/* Add Task */}
+
+        /* Add Task */
         <div className="row">
           <div className="col">
             <input value={newTask} onChange={(e) => setNewTask(e.target.value)}
@@ -10,9 +10,8 @@ const AddTaskForm = ({setNewTask, addTask, newTask }) => {
           <div className="col-auto">
             <button onClick={addTask} className="btn btn-lg btn-success">Add Task</button>
           </div>
-        </div>
-        <br/>
-      </>    
+        </div>  
+        
     )
 }
 
